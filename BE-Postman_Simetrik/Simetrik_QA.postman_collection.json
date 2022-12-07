@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "6b4c4012-81d1-463e-9c61-6076b570737d",
+		"name": "Simetrik_QA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "200",
+			"item": [
+				{
+					"name": "200-limit-100",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"status\", 200);\r",
+									"//Data que espero en la respuesta\r",
+									"pm.environment.set(\"count\", 1154);\r",
+									"pm.environment.set(\"next\", \"https://pokeapi.co/api/v2/pokemon?offset=201&limit=1\");\r",
+									"pm.environment.set(\"previous\", \"https://pokeapi.co/api/v2/pokemon?offset=199&limit=1\");\r",
+									"pm.environment.set(\"name\", \"unown\");\r",
+									"pm.environment.set(\"url\", \"https://pokeapi.co/api/v2/pokemon/201/\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/pokemon?limit=100&offset=200",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemon"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "offset",
+									"value": "200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200-limit1",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"status\", 200);\r",
+									"//Data que espero en la respuesta\r",
+									"pm.environment.set(\"count\", 1154);\r",
+									"pm.environment.set(\"next\", \"https://pokeapi.co/api/v2/pokemon?offset=201&limit=1\");\r",
+									"pm.environment.set(\"previous\", \"https://pokeapi.co/api/v2/pokemon?offset=199&limit=1\");\r",
+									"pm.environment.set(\"name\", \"unown\");\r",
+									"pm.environment.set(\"url\", \"https://pokeapi.co/api/v2/pokemon/201/\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/pokemon?limit=1&offset=200",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemon"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "offset",
+									"value": "200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200-limit-999999",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/pokemon?limit=9999999&offset=200",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemon"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "9999999"
+								},
+								{
+									"key": "offset",
+									"value": "200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200-limit-0",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/pokemon?limit=0&offset=200",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemon"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "0"
+								},
+								{
+									"key": "offset",
+									"value": "200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200-limit-sin-limite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/pokemon?",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemon"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200-limit-offset-9999",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/pokemon?limit=100&offset=9999",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemon"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "offset",
+									"value": "9999"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200-http",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://pokeapi.co/api/v2/pokemon?limit=100&offset=200",
+							"protocol": "http",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemon"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "offset",
+									"value": "200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200-limit10-offset10",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://pokeapi.co/api/v2/pokemon?limit=10&offset=10",
+							"protocol": "http",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemon"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "404",
+			"item": [
+				{
+					"name": "404-endpoint-incorrect",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/pokemonn",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemonn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "404-without-version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api//pokemon?limit=100&offset=200",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"",
+								"pokemon"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "offset",
+									"value": "200"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const status = pm.environment.get(\"status\");",
+					"const response = pm.response.json();",
+					"",
+					"//Como ejemplo se automatiza la respuesta tipo 200",
+					"",
+					"if(status == 200){",
+					"    const count = pm.environment.get(\"count\");",
+					"    const next = pm.environment.get(\"next\");",
+					"    const previous = pm.environment.get(\"previous\");",
+					"    const name = pm.environment.get(\"name\");",
+					"    const url = pm.environment.get(\"url\");",
+					"    ",
+					"    pm.test(\"Status code is 200\", function () {",
+					"        pm.response.to.have.status(200);",
+					"    });",
+					"",
+					"    pm.test(\"Validate keys from response 200\", function () {",
+					"        pm.expect(response).to.have.keys(\"count\", \"next\", \"previous\", \"results\");",
+					"        pm.expect(response.results[0]).to.have.all.keys(\"name\", \"url\");",
+					"    });",
+					"",
+					"    pm.test(\"Validate data from response 200\", function () {",
+					"        pm.expect(response.count).to.eql(count);",
+					"        pm.expect(response.next).to.eql(next);",
+					"        pm.expect(response.previous).to.eql(previous);",
+					"        pm.expect(response.results[0].name).to.eql(name);",
+					"        pm.expect(response.results[0].url).to.eql(url);",
+					"    });",
+					"",
+					"}"
+				]
+			}
+		}
+	]
+}

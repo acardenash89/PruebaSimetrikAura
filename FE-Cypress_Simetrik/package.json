@@ -1,0 +1,20 @@
+{
+  "name": "cypress_simetrik",
+  "version": "1.0.0",
+  "description": "Prueba simetrik test",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "cypress:open": "cypress open"
+  },
+  "keywords": [
+    "test",
+    "simetrik",
+    "automation"
+  ],
+  "author": "Aura Cardenas",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.0.1"
+  }
+}
